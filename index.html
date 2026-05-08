@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#02152b;
+    color:white;
+}
+
+.main-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:100vh;
+    padding:80px;
+    gap:60px;
+    max-width:1400px;
+    margin:auto;
+}
+
+.left-section{
+    width:55%;
+}
+
+.left-section h1{
+    font-size:58px;
+    line-height:1.15;
+    margin-top:20px;
+    margin-bottom:30px;
+    font-weight:700;
+}
+
+.event-details{
+    font-size:20px;
+    margin-top:20px;
+    line-height:1.7;
+    color:#d0d8e2;
+}
+
+.right-section{
+    width:38%;
+    background:white;
+    padding:45px;
+    border-radius:20px;
+    color:black;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.right-section h2{
+    text-align:center;
+    margin-bottom:35px;
+    font-size:32px;
+    color:#02152b;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input{
+    padding:16px;
+    margin-bottom:18px;
+    border-radius:10px;
+    border:1px solid #d0d7e2;
+    font-size:15px;
+    outline:none;
+}
+
+button{
+    padding:18px;
+    border:none;
+    background:#0b57d0;
+    color:white;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#003ea8;
+}
+
+.discussion-section{
+    padding:80px;
+    max-width:1400px;
+    margin:auto;
+}
+
+.discussion-section h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.discussion-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.discussion-card{
+    background:#0b2342;
+    padding:35px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.discussion-card h3{
+    margin-bottom:18px;
+    font-size:24px;
+}
+
+.discussion-card p{
+    color:#d0d8e2;
+    line-height:1.7;
+}
+
+.benefits-section{
+    padding:80px;
+    max-width:1400px;
+    margin:auto;
+}
+
+.benefits-section h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.benefits-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.benefit-card{
+    background:white;
+    color:black;
+    padding:35px;
+    border-radius:18px;
+}
+
+.benefit-card h3{
+    margin-bottom:18px;
+    font-size:24px;
+}
+
+.benefit-card p{
+    line-height:1.8;
+    color:#444;
+}
+
+@media(max-width: 992px){
+
+    .main-container{
+        flex-direction:column;
+        padding:40px 25px;
+    }
+
+    .left-section{
+        width:100%;
+    }
+
+    .right-section{
+        width:100%;
+        margin-top:40px;
+    }
+
+    .left-section h1{
+        font-size:40px;
+    }
+
+    .discussion-grid{
+        grid-template-columns:1fr;
+    }
+
+    .benefits-grid{
+        grid-template-columns:1fr;
+    }
+
+    .discussion-section,
+    .benefits-section{
+        padding:40px 25px;
+    }
+
+    .discussion-section h2,
+    .benefits-section h2{
+        font-size:32px;
+    }
+
+}
+
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Dinner Registration</title>
+</head>
+
+<body>
+<div class="main-container">
+
+  <div class="left-section">
+    <h4>EXECUTIVE DINNER</h4>
+
+    <h1>
+      Scaling Agentic AI:
+      From Experimentation to Enterprise Value Through Modernization and Trust
+    </h1>
+
+    <p class="event-details">
+      Tuesday, May 19, 2026<br>
+      The Capital Grille - Uptown - Dallas
+    </p>
+  </div>
+
+  <div class="right-section">
+
+    <h2>Register Now</h2>
+
+      <form id="eventForm">
+      <input type="text" name="first_name" placeholder="First Name" required>
+
+      <input type="text" name="last_name" placeholder="Last Name" required>
+
+      <input type="email" name="email" placeholder="Work Email" required>
+
+      <input type="text" name="company" placeholder="Company" required>
+
+      <input type="text" name="job_title" placeholder="Job Title" required>
+
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <input type="hidden" name="campaign" value="IDC Executive Dinner Dallas 2026">
+      <button type="submit">Register Now</button>
+
+    </form>
+
+   <div id="successMessage" style="display:none; margin-top:25px; text-align:center;">
+    
+    <h3>Thank You! Your Seat Has Been Reserved.</h3>
+
+    <p id="confirmationCode"></p>
+
+</div>
+
+  </div>
+
+</div>
+
+<section class="discussion-section">
+
+    <h2>Discussion Focus Areas</h2>
+
+    <div class="discussion-grid">
+
+        <div class="discussion-card">
+            <h3>Scaling Agentic AI</h3>
+            <p>
+                Move from experimentation to enterprise-wide impact with scalable AI strategies.
+            </p>
+        </div>
+
+        <div class="discussion-card">
+            <h3>AI Modernization</h3>
+            <p>
+                Modern infrastructure strategies that accelerate AI readiness and business value.
+            </p>
+        </div>
+
+        <div class="discussion-card">
+            <h3>Measuring ROI</h3>
+            <p>
+                Communicating AI value and measurable ROI to boards and stakeholders.
+            </p>
+        </div>
+
+        <div class="discussion-card">
+            <h3>Governance & Trust</h3>
+            <p>
+                Embedding governance, trust, and compliance into AI-first operating models.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="benefits-section">
+
+    <h2>Your Complimentary Benefits</h2>
+
+    <div class="benefits-grid">
+
+        <div class="benefit-card">
+            <h3>🚗 Uber Travel Voucher</h3>
+
+            <p>
+                A complimentary Uber voucher will be provided for your
+                round-trip transportation to ensure a seamless executive experience.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <h3>🎁 Exclusive Executive Gift</h3>
+
+            <p>
+                Attending guests will receive an exclusive curated gift
+                as a token of appreciation from IDC.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+const form = document.getElementById("eventForm");
+
+form.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const confirmationId = "IDC-AI-" + Math.floor(Math.random() * 900000);
+
+    const formData = new FormData(form);
+
+    formData.append("confirmation_id", confirmationId);
+
+    const response = await fetch("https://formspree.io/f/xlgzwqab", {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+
+    if(response.ok){
+
+        form.style.display = "none";
+
+        document.getElementById("successMessage").style.display = "block";
+
+        document.getElementById("confirmationCode").innerHTML =
+        "Confirmation ID: <strong>" + confirmationId + "</strong>";
+
+    } else {
+
+        alert("Something went wrong. Please try again.");
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
